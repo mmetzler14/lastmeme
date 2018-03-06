@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Store</h1>
 
 <table class="table table-responsive">
   <thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.title %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.price %></td>
+        <td><h4><%= sanitize(product.title) %></h4></td>
+        <td width="50%"><%= sanitize(strip_tags(product.description)) %></td>
+        <td><%= image_tag(product.image_url) %></td>
+        <td><%= number_to_currency(product.price) %></td>
         <td><%= link_to 'Add to Cart', product , class:"btn btn-xs btn-success" %></td>
       </tr>
     <% end %>
@@ -28,4 +28,3 @@
 
 <br>
 
-<%= link_to 'Purchase Products', new_product_path , class:"btn btn-xs btn-success" %>
