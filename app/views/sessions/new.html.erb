@@ -1,8 +1,7 @@
 <div class="w3-container">
     
 <h1>Create a Sessions and a Session User_ID</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
-<div class="w3-alert">
+<div class="alert alert-info">
 <% if flash[:alert] %>
 <p id="notice"><%= flash[:alert] %></p>
 <% end %>
@@ -12,17 +11,17 @@
 
 <legend>Please Log In</legend>
 
-<div class="w3-panel">
+<div class="panel panel-default">
 <%= label_tag :name, 'Name:' %>
-<%= text_field_tag :name, params[:name], class:"w3-input w3-border" %>
+<%= text_field_tag :name, params[:name], class:"input-group" %>
 </div>
 
-<div class="w3-panel">
+<div class="panel panel-default">
 <%= label_tag :password, 'Password:' %>
 <%= password_field_tag :password, params[:password], class:"w3-input w3-border" %>
 </div>
 
-<div class="w3-panel">
+<div class="panel panel-default">
 <%= submit_tag "Login", class:"w3-button w3-light-gray w3-border" %>
 </div>
 

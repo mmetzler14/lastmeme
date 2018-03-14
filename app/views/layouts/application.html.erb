@@ -19,6 +19,9 @@
       <li><a href="/static_pages/help">Ehh, Help</a></li>
       <li><a href="/static_pages/about">Come About</a></li>
     </ul>
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href=<%= link_to 'Login', login_path, method: :post%></a></li>
+    </ul>
       
        <% if session[:user_id] %>
       <ul>
