@@ -1,6 +1,6 @@
 <div class="w3-container">
     
-<h1>Create a Sessions and a Session User_ID</h1>
+<h1>Create a Session and a Session User_ID</h1>
 <div class="alert alert-info">
 <% if flash[:alert] %>
 <p id="notice"><%= flash[:alert] %></p>
@@ -11,18 +11,18 @@
 
 <legend>Please Log In</legend>
 
-<div class="panel panel-default">
+<div class="form-group">
 <%= label_tag :name, 'Name:' %>
-<%= text_field_tag :name, params[:name], class:"input-group" %>
+<%= text_field_tag :name, params[:name]  %>
 </div>
 
-<div class="panel panel-default">
+<div class="form-group">
 <%= label_tag :password, 'Password:' %>
-<%= password_field_tag :password, params[:password], class:"w3-input w3-border" %>
+<%= password_field_tag :password, params[:password]  %>
 </div>
 
-<div class="panel panel-default">
-<%= submit_tag "Login", class:"w3-button w3-light-gray w3-border" %>
+<div class="form-group">
+<%= submit_tag "Login", class:"btn btn-info" %>
 </div>
 
 <% end %>
